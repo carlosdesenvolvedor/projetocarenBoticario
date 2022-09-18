@@ -19,6 +19,7 @@ import javax.swing.ImageIcon;
  */
 public class ImagemUpload {
     Connection conexao = null;
+    double teste;
     PreparedStatement pst = null;
     ResultSet rs = null; //resultado 
     File f= null;
