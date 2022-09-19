@@ -18,6 +18,7 @@ import javax.swing.ImageIcon;
  * @author carlo
  */
 public class ImagemUpload {
+    //usado para auxiliar na implementação das funções de tela..
     Connection conexao = null;
     PreparedStatement pst = null;
     ResultSet rs = null; //resultado 
