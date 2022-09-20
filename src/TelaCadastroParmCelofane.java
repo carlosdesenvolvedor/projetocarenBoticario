@@ -862,7 +862,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
 
     }
      private void consultar_formato() {
-       // String sql = "select * from tbusuarios where iduser=?";
+       // String sql = "select * from tbusuarios where iduser=?";321
         String sql = "select * from tbparametrogeral where formato=?";
         try {
             pst = conexao.prepareStatement(sql);
