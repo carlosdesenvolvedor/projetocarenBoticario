@@ -15,9 +15,9 @@ public class ModuloConexao {
         //a linha abaixo chama o driver que importei para biblioteca
         String driver = "com.mysql.jdbc.Driver";
         //armazenando informações referente ao banco:
-        String url = "jdbc:mysql://localhost:3306/dbinfox";
-        String user = "root";
-        String password = "123456789";
+        String url = "jdbc:mysql://192.168.0.2:3306/dbinfox";
+        String user = "dba";
+        String password = "Ce134679*";
         
         //estabelecendo a conexão com o banco
         try {
