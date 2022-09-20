@@ -344,6 +344,9 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(null, "Produto adicionado com sucesso!!");
                     //as linhas abaixo limpa os campos
                     txtFor.setText(null);
+                    cboAbastecimento.setSelectedItem(null);
+                    cboAcondicionamento.setSelectedItem(null);
+                    cboEsteira.setSelectedItem(null);
                     cboMaquina.setSelectedItem(null);
                     txtProduto1.setText(null);
                     txtF1a.setText(null);
@@ -499,6 +502,11 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 if(apagado>0){
                     JOptionPane.showMessageDialog(null, "Produto removido com sucess!!");
                       txtFor.setText(null);
+                      
+                    txtFor.setText(null);
+                    cboAbastecimento.setSelectedItem(null);
+                    cboAcondicionamento.setSelectedItem(null);
+                    cboEsteira.setSelectedItem(null);  
                     cboMaquina.setSelectedItem(null);
                     txtProduto1.setText(null);
                     txtF1a.setText(null);
@@ -645,7 +653,15 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             if (rs.next()) {
                     
                     txtFor.setText(rs.getString(2));
-                    cboMaquina.setSelectedItem(rs.getString(3).toString());
+                    /*cbo.setText(rs.getString("acondicionamento"));
+                txtAbaste.setText(rs.getString("abastecimento"));
+                txtEsteira.setText(rs.getString("esteira"));
+                txtFormato.setText(rs.getString("formato"));*/
+                    
+                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
+                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                    cboMaquina.setSelectedItem(rs.getString(2).toString());
                     txtF1a.setText(rs.getString(5));
                     txtF1b.setText(rs.getString(6));
                     txtF1c.setText(rs.getString(7));
@@ -758,6 +774,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtCel59.setText(rs.getString(114));
                     txtCel60.setText(rs.getString(115));
                     txtFoto1.setText(rs.getString(116));
+                    
                     try {
                     lblimagem.setIcon(null);
                     
@@ -854,7 +871,9 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(1,txtFor.getText());
             rs = pst.executeQuery();
             if (rs.next()) {
-                
+                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
+                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
                     txtFor.setText(rs.getString(2));
                     cboMaquina.setSelectedItem(rs.getString(3).toString());
                     txtF1a.setText(rs.getString(5));
