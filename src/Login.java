@@ -14,7 +14,7 @@ import java.awt.Color;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
-
+//ultima mitada
     /**
      * Creates new form Login
      */
