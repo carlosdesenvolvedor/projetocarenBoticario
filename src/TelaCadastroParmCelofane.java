@@ -485,7 +485,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             }  
         } 
         catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "ERRO, produto não cadastrado!!!");
+                JOptionPane.showMessageDialog(null, "Erro, produto não cadastrado pois é obrigatorio as 4 fotos...");
             }
        
     }

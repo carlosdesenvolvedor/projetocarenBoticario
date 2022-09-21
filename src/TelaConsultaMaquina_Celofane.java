@@ -114,7 +114,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     labelDisplayImage2.setIcon(image2);
                     
                 }catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 2, favar informar responsavel por cadastramento!!");
+                    
                 }
                 
                 
@@ -131,7 +131,6 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     labelDisplayImage3.setIcon(image3);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 3, favar informar responsavel por cadastramento!!");
                 }
                     
                 // foto 4
@@ -146,7 +145,6 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     labelDisplayImage4.setIcon(image4);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 4, favar informar responsavel por cadastramento!!");
                 }
                
                 
@@ -331,7 +329,6 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     labelDisplayImage2.setIcon(image2);
                     
                 }catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 2, favar informar responsavel por cadastramento!!");
                 }
                 
                 
@@ -348,7 +345,6 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     labelDisplayImage3.setIcon(image3);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 3, favar informar responsavel por cadastramento!!");
                 }
                     
                 // foto 4
@@ -363,7 +359,6 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     labelDisplayImage4.setIcon(image4);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 4, favar informar responsavel por cadastramento!!");
                 }
                
                 

@@ -48,6 +48,7 @@ public class Login extends javax.swing.JFrame {
                        // TelaDesktopAdm.MenCadMaq.setEnabled(true);
                         //caso precise libera mais, não esquecer do tornar opção public, static
                         TelaDesktopAdm.MenCadCol.setEnabled(true);
+                        TelaDesktopAdm.menCadCel.setEnabled(true);
                         //a linha abaixo muda nome do usuario
                         TelaDesktopAdm.lblusuario.setText(rs.getString(2));
                         //a linha abaixo muda cor do nome do usuario

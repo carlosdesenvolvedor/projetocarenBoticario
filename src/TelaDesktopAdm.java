@@ -66,7 +66,7 @@ public class TelaDesktopAdm extends javax.swing.JFrame {
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         MenCadCol = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
+        menCadCel = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -77,7 +77,6 @@ public class TelaDesktopAdm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("X - Sistema de cadastro e consulta de parâmetros.");
-        setPreferredSize(new java.awt.Dimension(900, 700));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -277,14 +276,15 @@ public class TelaDesktopAdm extends javax.swing.JFrame {
         });
         jMenu2.add(MenCadCol);
 
-        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem12.setText("Maquina + Celofane");
-        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+        menCadCel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        menCadCel.setText("Maquina + Celofane");
+        menCadCel.setEnabled(false);
+        menCadCel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
+                menCadCelActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem12);
+        jMenu2.add(menCadCel);
 
         jMenu4.add(jMenu2);
 
@@ -417,12 +417,12 @@ public class TelaDesktopAdm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+    private void menCadCelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menCadCelActionPerformed
         // Abrir tela cadastro celofane
         TelaCadastroParmCelofane celofane = new TelaCadastroParmCelofane();
         celofane.setVisible(true);
         
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
+    }//GEN-LAST:event_menCadCelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -472,7 +472,6 @@ public class TelaDesktopAdm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -483,5 +482,6 @@ public class TelaDesktopAdm extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JLabel lblData;
     public static javax.swing.JLabel lblusuario;
+    public static javax.swing.JMenuItem menCadCel;
     // End of variables declaration//GEN-END:variables
 }
