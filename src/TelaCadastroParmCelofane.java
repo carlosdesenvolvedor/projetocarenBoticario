@@ -79,7 +79,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             
             imagePath.setText(path1);
             ImageIcon li = new ImageIcon(path1);
-            Image img = li.getImage().getScaledInstance(300, 250, Image.SCALE_SMOOTH);
+            Image img = li.getImage().getScaledInstance(200, 250, Image.SCALE_SMOOTH);
             lblimagem.setIcon(new ImageIcon(img));
     
         }
@@ -99,7 +99,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             
             imagePath2.setText(path2);
             ImageIcon li2 = new ImageIcon(path2);
-            Image img2 = li2.getImage().getScaledInstance(300, 250, Image.SCALE_SMOOTH);
+            Image img2 = li2.getImage().getScaledInstance(200, 250, Image.SCALE_SMOOTH);
             lblimage2.setIcon(new ImageIcon(img2));
             
     
@@ -118,7 +118,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             
             imagePath3.setText(path3);
             ImageIcon li2 = new ImageIcon(path3);
-            Image img2 = li2.getImage().getScaledInstance(300, 250, Image.SCALE_SMOOTH);
+            Image img2 = li2.getImage().getScaledInstance(200, 250, Image.SCALE_SMOOTH);
             lblimagem3.setIcon(new ImageIcon(img2));
             
     
@@ -137,7 +137,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             
             imagePath4.setText(path4);
             ImageIcon li2 = new ImageIcon(path4);
-            Image img2 = li2.getImage().getScaledInstance(300, 250, Image.SCALE_SMOOTH);
+            Image img2 = li2.getImage().getScaledInstance(200, 250, Image.SCALE_SMOOTH);
             lblimagem4.setIcon(new ImageIcon(img2));
             
     
@@ -782,7 +782,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     format = new ImageIcon(imagedata);
                     Image mm = format.getImage();
-                    Image img1 = mm.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img1 = mm.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image = new ImageIcon(img1);
                     lblimagem.setIcon(image);
                     
@@ -799,7 +799,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     format2 = new ImageIcon(imagedata2);
                     Image mm2 = format2.getImage();
-                    Image img2 = mm2.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img2 = mm2.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image2 = new ImageIcon(img2);
                     lblimage2.setIcon(image2);
                     
@@ -816,7 +816,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     byte[] imagedata3 = rs.getBytes("foto3");
                     format3 = new ImageIcon(imagedata3);
                     Image mm3 = format3.getImage();
-                    Image img3 = mm3.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img3 = mm3.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image3 = new ImageIcon(img3);
                     lblimagem3.setIcon(image3);
                     
@@ -831,7 +831,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     byte[] imagedata4 = rs.getBytes("foto4");
                     format4 = new ImageIcon(imagedata4);
                     Image mm4 = format4.getImage();
-                    Image img4 = mm4.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img4 = mm4.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image4 = new ImageIcon(img4);
                     lblimagem4.setIcon(image4);
                     
@@ -996,7 +996,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     format = new ImageIcon(imagedata);
                     Image mm = format.getImage();
-                    Image img1 = mm.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img1 = mm.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image = new ImageIcon(img1);
                     lblimagem.setIcon(image);
                     
@@ -1013,7 +1013,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     format2 = new ImageIcon(imagedata2);
                     Image mm2 = format2.getImage();
-                    Image img2 = mm2.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img2 = mm2.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image2 = new ImageIcon(img2);
                     lblimage2.setIcon(image2);
                     
@@ -1030,7 +1030,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     byte[] imagedata3 = rs.getBytes("foto3");
                     format3 = new ImageIcon(imagedata3);
                     Image mm3 = format3.getImage();
-                    Image img3 = mm3.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img3 = mm3.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image3 = new ImageIcon(img3);
                     lblimagem3.setIcon(image3);
                     
@@ -1045,7 +1045,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     byte[] imagedata4 = rs.getBytes("foto4");
                     format4 = new ImageIcon(imagedata4);
                     Image mm4 = format4.getImage();
-                    Image img4 = mm4.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img4 = mm4.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image4 = new ImageIcon(img4);
                     lblimagem4.setIcon(image4);
                     
@@ -2568,7 +2568,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         c8_Layout.setVerticalGroup(
             c8_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(c8_Layout.createSequentialGroup()
-                .addContainerGap(17, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE)
                 .addGroup(c8_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel52)
                     .addComponent(txtCel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3403,7 +3403,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         c6_Layout.setVerticalGroup(
             c6_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(c6_Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addGroup(c6_Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel108)
                     .addComponent(txtCel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3471,12 +3471,12 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         PainelCelofaneLayout.setVerticalGroup(
             PainelCelofaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PainelCelofaneLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap(32, Short.MAX_VALUE)
                 .addGroup(PainelCelofaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PainelCelofaneLayout.createSequentialGroup()
                         .addComponent(c1_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 22, Short.MAX_VALUE))
-                    .addComponent(c2, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE))
+                        .addGap(0, 26, Short.MAX_VALUE))
+                    .addComponent(c2, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PainelCelofaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelCelofaneLayout.createSequentialGroup()
@@ -3508,7 +3508,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                         .addComponent(c13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PainelCelofaneLayout.createSequentialGroup()
-                        .addComponent(c14_, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                        .addComponent(c14_, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                 .addGroup(PainelCelofaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(c15_, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3545,7 +3545,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                         .addComponent(c30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(13, 13, 13)
                 .addComponent(c31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(757, Short.MAX_VALUE))
+                .addContainerGap(761, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("CENTERLINE", PainelCelofane);
@@ -4131,7 +4131,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(1451, Short.MAX_VALUE))
+                .addContainerGap(1491, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("OUTROS PARAMENTROS / SALVAR", jPanel1);
@@ -4232,12 +4232,12 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                                 .addComponent(btnFoto1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton2))
-                            .addComponent(lblimagem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblimagem3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblimagem, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblimagem3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(40, 40, 40)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblimage2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblimagem4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblimage2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblimagem4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addComponent(txtFoto4, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4274,8 +4274,8 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblimagem, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblimage2, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblimagem, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblimage2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFoto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4286,8 +4286,8 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     .addComponent(jButton7))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblimagem3, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblimagem4, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblimagem3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblimagem4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFoto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4308,7 +4308,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     .addComponent(imagePath4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(imagePaht5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(imagePath6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(1107, Short.MAX_VALUE))
+                .addContainerGap(1153, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("IMAGENS", jPanel10);

@@ -5659,17 +5659,17 @@
                                   <Component id="txtObs3" min="-2" pref="322" max="-2" attributes="0"/>
                               </Group>
                               <Component id="txtObs" alignment="0" min="-2" pref="315" max="-2" attributes="0"/>
-                              <Component id="labelDisplayImage1" pref="350" max="32767" attributes="0"/>
-                              <Component id="labelDisplayImage3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="labelDisplayImage1" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="labelDisplayImage3" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="txtObs2" min="-2" pref="310" max="-2" attributes="0"/>
                               <Component id="txtObs4" min="-2" max="-2" attributes="0"/>
-                              <Component id="labelDisplayImage2" alignment="0" pref="350" max="32767" attributes="0"/>
-                              <Component id="labelDisplayImage4" alignment="0" pref="350" max="32767" attributes="0"/>
+                              <Component id="labelDisplayImage2" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                              <Component id="labelDisplayImage4" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="1388" max="32767" attributes="0"/>
+                          <EmptySpace pref="1450" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -5678,8 +5678,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="labelDisplayImage1" max="32767" attributes="0"/>
-                              <Component id="labelDisplayImage2" pref="276" max="32767" attributes="0"/>
+                              <Component id="labelDisplayImage1" min="-2" pref="270" max="-2" attributes="0"/>
+                              <Component id="labelDisplayImage2" min="-2" pref="270" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -5693,8 +5693,8 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="labelDisplayImage4" pref="277" max="32767" attributes="0"/>
-                              <Component id="labelDisplayImage3" max="32767" attributes="0"/>
+                              <Component id="labelDisplayImage4" min="-2" pref="270" max="-2" attributes="0"/>
+                              <Component id="labelDisplayImage3" min="-2" pref="270" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">

@@ -1025,13 +1025,13 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace pref="14" max="32767" attributes="0"/>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="c1_" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="c2" pref="73" max="32767" attributes="0"/>
+                              <Component id="c2" pref="77" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1072,7 +1072,7 @@
                                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="c14_" pref="68" max="32767" attributes="0"/>
+                                  <Component id="c14_" pref="72" max="32767" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1120,7 +1120,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Component id="c31" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="757" max="32767" attributes="0"/>
+                          <EmptySpace pref="761" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1387,7 +1387,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="17" max="32767" attributes="0"/>
+                              <EmptySpace pref="19" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel52" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtCel8" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2852,7 +2852,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace pref="16" max="32767" attributes="0"/>
+                              <EmptySpace pref="18" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel108" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtCel6" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2906,7 +2906,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jTabbedPane1" min="-2" pref="553" max="-2" attributes="0"/>
-                          <EmptySpace pref="1451" max="32767" attributes="0"/>
+                          <EmptySpace pref="1491" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -3839,13 +3839,13 @@
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="jButton2" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="lblimagem" max="32767" attributes="0"/>
-                                      <Component id="lblimagem3" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblimagem" min="-2" pref="220" max="-2" attributes="0"/>
+                                      <Component id="lblimagem3" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="lblimage2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="lblimagem4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="lblimage2" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
+                                      <Component id="lblimagem4" alignment="0" min="-2" pref="220" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="txtFoto4" min="-2" pref="186" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -3896,8 +3896,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblimagem" alignment="3" min="-2" pref="273" max="-2" attributes="0"/>
-                              <Component id="lblimage2" alignment="3" min="-2" pref="273" max="-2" attributes="0"/>
+                              <Component id="lblimagem" alignment="3" min="-2" pref="270" max="-2" attributes="0"/>
+                              <Component id="lblimage2" alignment="3" min="-2" pref="270" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -3910,8 +3910,8 @@
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblimagem3" alignment="3" min="-2" pref="273" max="-2" attributes="0"/>
-                              <Component id="lblimagem4" alignment="3" min="-2" pref="273" max="-2" attributes="0"/>
+                              <Component id="lblimagem3" alignment="3" min="-2" pref="270" max="-2" attributes="0"/>
+                              <Component id="lblimagem4" alignment="3" min="-2" pref="270" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -3936,7 +3936,7 @@
                               <Component id="imagePaht5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="imagePath6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="1107" max="32767" attributes="0"/>
+                          <EmptySpace pref="1153" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

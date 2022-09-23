@@ -91,7 +91,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     
                     format = new ImageIcon(imagedata);
                     Image mm = format.getImage();
-                    Image img1 = mm.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img1 = mm.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image = new ImageIcon(img1);
                     labelDisplayImage1.setIcon(image);
                     
@@ -109,7 +109,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     
                     format2 = new ImageIcon(imagedata2);
                     Image mm2 = format2.getImage();
-                    Image img2 = mm2.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img2 = mm2.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image2 = new ImageIcon(img2);
                     labelDisplayImage2.setIcon(image2);
                     
@@ -126,7 +126,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     byte[] imagedata3 = rs.getBytes("foto3");
                     format3 = new ImageIcon(imagedata3);
                     Image mm3 = format3.getImage();
-                    Image img3 = mm3.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img3 = mm3.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image3 = new ImageIcon(img3);
                     labelDisplayImage3.setIcon(image3);
                     
@@ -306,7 +306,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     
                     format = new ImageIcon(imagedata);
                     Image mm = format.getImage();
-                    Image img1 = mm.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img1 = mm.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image = new ImageIcon(img1);
                     labelDisplayImage1.setIcon(image);
                     
@@ -324,7 +324,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     
                     format2 = new ImageIcon(imagedata2);
                     Image mm2 = format2.getImage();
-                    Image img2 = mm2.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img2 = mm2.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image2 = new ImageIcon(img2);
                     labelDisplayImage2.setIcon(image2);
                     
@@ -354,7 +354,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     byte[] imagedata4 = rs.getBytes("foto4");
                     format4 = new ImageIcon(imagedata4);
                     Image mm4 = format4.getImage();
-                    Image img4 = mm4.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img4 = mm4.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image4 = new ImageIcon(img4);
                     labelDisplayImage4.setIcon(image4);
                     
@@ -3630,23 +3630,23 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addComponent(txtObs3, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(txtObs, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelDisplayImage1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                    .addComponent(labelDisplayImage3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(labelDisplayImage1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDisplayImage3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(txtObs2, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtObs4)
-                    .addComponent(labelDisplayImage2, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE)
-                    .addComponent(labelDisplayImage4, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))
-                .addContainerGap(1388, Short.MAX_VALUE))
+                    .addComponent(labelDisplayImage2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDisplayImage4, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(1450, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(labelDisplayImage1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(labelDisplayImage2, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE))
+                    .addComponent(labelDisplayImage1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDisplayImage2, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -3656,8 +3656,8 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                         .addComponent(txtObs)
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(labelDisplayImage4, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
-                    .addComponent(labelDisplayImage3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(labelDisplayImage4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelDisplayImage3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtObs3)
