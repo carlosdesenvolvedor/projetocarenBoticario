@@ -140,7 +140,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                     byte[] imagedata4 = rs.getBytes("foto4");
                     format4 = new ImageIcon(imagedata4);
                     Image mm4 = format4.getImage();
-                    Image img4 = mm4.getScaledInstance(349,250, Image.SCALE_SMOOTH);
+                    Image img4 = mm4.getScaledInstance(200,250, Image.SCALE_SMOOTH);
                     ImageIcon image4 = new ImageIcon(img4);
                     labelDisplayImage4.setIcon(image4);
                     
