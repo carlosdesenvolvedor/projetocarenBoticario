@@ -633,7 +633,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 }
                 
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, e);
+                JOptionPane.showMessageDialog(null, "erro ao excluir Produto, contate o técnico!!");
             }
                
         }
@@ -862,7 +862,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 cboUsoPerfil.setSelectedItem(null);*/
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "erro aqui");
+            JOptionPane.showMessageDialog(null, e);
         }
 
     }
@@ -1022,7 +1022,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     
                 } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, "produto sem imagem, favar informar responsavel por cadastramento!!");
+                        JOptionPane.showMessageDialog(null, e);
 
                 }
                 
