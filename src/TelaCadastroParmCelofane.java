@@ -771,6 +771,22 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtCel59.setText(rs.getString(114));
                     txtCel60.setText(rs.getString(115));
                     txtFoto1.setText(rs.getString(116));
+                    txtFoto2.setText(rs.getString(119));
+                    txtFoto3.setText(rs.getString(122));
+                    txtFoto4.setText(rs.getString(125));
+                    txtObsGeral.setText(rs.getString(128));
+                    try {
+                        cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                        cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                        cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
+                    
+                } catch (Exception e) {
+                    
+                }
+                        
+
+                    
+                
                     
                     try {
                     lblimagem.setIcon(null);
@@ -785,6 +801,8 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     
                 } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "produto sem imagem, favar informar responsavel por cadastramento!!");
+
                 }
                 
                
@@ -801,7 +819,6 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimage2.setIcon(image2);
                     
                 }catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 2, favar informar responsavel por cadastramento!!");
                 }
                 
                 
@@ -818,7 +835,6 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimagem3.setIcon(image3);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 3, favar informar responsavel por cadastramento!!");
                 }
                     
                 // foto 4
@@ -833,20 +849,8 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimagem4.setIcon(image4);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 4, favar informar responsavel por cadastramento!!");
                 }
-                    txtFoto2.setText(rs.getString(119));
-                    txtFoto3.setText(rs.getString(122));
-                    txtFoto4.setText(rs.getString(125));
-                    txtObsGeral.setText(rs.getString(128));
-                    try {
-                        cboEsteira.setSelectedItem(rs.getString("esteira").toString());
-                        cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
-                        cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
-
                     
-                } catch (Exception e) {
-                }
 
             } else {
                 JOptionPane.showMessageDialog(null, "Produto não cadastrado");
@@ -858,7 +862,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 cboUsoPerfil.setSelectedItem(null);*/
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "erro aqui");
         }
 
     }
@@ -873,8 +877,8 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             rs = pst.executeQuery();
             if (rs.next()) {
               
-                    txtFor.setText(rs.getString(2));
                     cboMaquina.setSelectedItem(rs.getString(3).toString());
+                    txtProduto1.setText(rs.getString(4));
                     txtF1a.setText(rs.getString(5));
                     txtF1b.setText(rs.getString(6));
                     txtF1c.setText(rs.getString(7));
@@ -986,8 +990,25 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtCel58.setText(rs.getString(113));
                     txtCel59.setText(rs.getString(114));
                     txtCel60.setText(rs.getString(115));
+                    
                     txtFoto1.setText(rs.getString(116));
-                    txtProduto1.setText(rs.getString(4));
+                    txtFoto2.setText(rs.getString(119));
+                    txtFoto3.setText(rs.getString(122));
+                    txtFoto4.setText(rs.getString(125));
+                    txtObsGeral.setText(rs.getString(128));
+                    try {
+                        cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                        cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                        cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
+                    
+                } catch (Exception e) {
+                    
+                }
+                        
+
+                    
+                
+                    
                     try {
                     lblimagem.setIcon(null);
                     
@@ -1001,6 +1022,8 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     
                     
                 } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "produto sem imagem, favar informar responsavel por cadastramento!!");
+
                 }
                 
                
@@ -1017,7 +1040,6 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimage2.setIcon(image2);
                     
                 }catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 2, favar informar responsavel por cadastramento!!");
                 }
                 
                 
@@ -1034,7 +1056,6 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimagem3.setIcon(image3);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 3, favar informar responsavel por cadastramento!!");
                 }
                     
                 // foto 4
@@ -1049,20 +1070,9 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimagem4.setIcon(image4);
                     
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "produto sem imagem 4, favar informar responsavel por cadastramento!!");
                 }
-                    txtFoto2.setText(rs.getString(119));
-                    txtFoto3.setText(rs.getString(122));
-                    txtFoto4.setText(rs.getString(125));
-                    txtObsGeral.setText(rs.getString(128));
-                    try {
-                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
-                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
-                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
-                
                     
-                } catch (Exception e) {
-                }
+               
                 
 
             } else {
@@ -1148,10 +1158,15 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 + "tc16=?,to16=?,tc17=?,to17=?,tc18=?,to18=?,tc19=?,to19=?,tc20=?,to20=?,tc21=?,to21=?,tc22=?,to22=?,tc23=?,to23=?,tc24=?,to24=?,"
                 + "tc25=?,to25=?,tc26=?,to26=?,tc27=?,to27=?,tc28=?,to28=?,tc29=?,to29=?,tc30=?,to30=?,tc31=?,to31=?,tc32=?,tc33=?,tc34=?,tc35=?,"
                 + "tc36=?,tc37=?,tc38=?,tc39=?,tc40=?,tc41=?,tc42=?,tc43=?,tc44=?,tc45=?,tc46=?,tc47=?,tc48=?,tc49=?,tc50=?,tc51=?,tc52=?,tc53=?,"
-                + "tc54=?,tc55=?,tc56=?,tc57=?,tc58=?,tc59=?,tc60=?,obsGeral=?, where formato = ?";
+                + "tc54=?,tc55=?,tc56=?,tc57=?,tc58=?,tc59=?,tc60=?,obsGeral=?,obs=?,obs2=?,"
+                + "obs3=?,obs4=?,esteira=?,Abastecimento=?,Acondicionamento=? where formato = ?";
                 //não esquecer dos obs das fotos e arrumar M.O
             try {
-                /*txtFoto2.setText(rs.getString(119));
+                /*imagePath1,foto1,obs,imagePath2,foto2,obs2,"
+                + "imagePath3,foto3,obs3,imagePath4,foto4,obs4,esteira,Abastecimento,Acondicionamento
+                
+                
+                txtFoto2.setText(rs.getString(119));
                     txtFoto3.setText(rs.getString(122));
                     txtFoto4.setText(rs.getString(125));
                     txtObsGeral.setText(rs.getString(128));
@@ -1279,16 +1294,18 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(112,txtCel59.getText());
             pst.setString(113,txtCel60.getText());
             pst.setString(114,txtObsGeral.getText());
-            pst.setString(115,txtFoto2.getText());
-            pst.setString(116,txtFoto3.getText());
-            pst.setString(117,txtFoto4.getText());
-            pst.setString(118,txtObsGeral.getText());
+            pst.setString(115,txtFoto1.getText());
+            pst.setString(116,txtFoto2.getText());
+            pst.setString(117,txtFoto3.getText());
+            pst.setString(118,txtFoto4.getText());
             pst.setString(119, cboEsteira.getSelectedItem().toString());
             pst.setString(120, cboAbastecimento.getSelectedItem().toString());
             pst.setString(121, cboAcondicionamento.getSelectedItem().toString());
             pst.setString(122,txtFor.getText());
             
-           
+           /*
+            imagePath1,foto1,obs,imagePath2,foto2,obs2,"
+                + "imagePath3,foto3,obs3,imagePath4,foto4,obs4,esteira,Abastecimento,Acondicionamento*/
                
             
             // a estrutura abaixo é usada para confirmar a alteração do parametro. 
@@ -1436,7 +1453,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             }
             
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+            JOptionPane.showMessageDialog(null, "Erro ao editar, favor fechar e abrir tela de parâmetros");
         }
         
     }
@@ -4369,15 +4386,15 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(20, 20, 20)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1054, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1293, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1283, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
