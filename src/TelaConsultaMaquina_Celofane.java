@@ -505,7 +505,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
         }
 
     }
-    private void pesquisar_produto(){
+  /*  private void pesquisar_produto(){
         String sql = "select * from tbparametrogeral where produto like ?";
         try {
             pst = conexao.prepareStatement(sql);
@@ -523,7 +523,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
         
-    }
+    }*/
     public void setar_campos(){
         int setar = tblProdutos.getSelectedRow();
         txtProduto.setText(tblProdutos.getModel().getValueAt(setar, 3).toString());
@@ -718,6 +718,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
         txtAcondi = new javax.swing.JLabel();
         jLabel121 = new javax.swing.JLabel();
         txtAbaste = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         PainelCelofane1 = new javax.swing.JPanel();
         c1_ = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
@@ -1227,6 +1228,14 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
         txtAbaste.setForeground(new java.awt.Color(0, 0, 255));
         txtAbaste.setText(bundle.getString("TelaConsultaMaquina_Celofane.txtAbaste.text")); // NOI18N
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-pesquisar-20.png"))); // NOI18N
+        jButton3.setText(bundle.getString("TelaConsultaMaquina_Celofane.jButton3.text")); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jInternalFrame5Layout = new javax.swing.GroupLayout(jInternalFrame5.getContentPane());
         jInternalFrame5.getContentPane().setLayout(jInternalFrame5Layout);
         jInternalFrame5Layout.setHorizontalGroup(
@@ -1357,9 +1366,11 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                             .addGroup(jInternalFrame5Layout.createSequentialGroup()
                                 .addComponent(txtProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jInternalFrame5Layout.createSequentialGroup()
@@ -1392,9 +1403,11 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
                             .addComponent(jButton1)
                             .addComponent(jLabel24))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel127)
-                            .addComponent(txtProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel127)
+                                .addComponent(txtProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton3))
                             .addComponent(jButton2)))
                     .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jInternalFrame5Layout.createSequentialGroup()
@@ -3709,11 +3722,11 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
 
     private void txtProdutoActionPerformed(ActionEvent evt) {//GEN-FIRST:event_txtProdutoActionPerformed
         // TODO add your handling code here:
+        consultar();
     }//GEN-LAST:event_txtProdutoActionPerformed
 
     private void txtProdutoKeyReleased(KeyEvent evt) {//GEN-FIRST:event_txtProdutoKeyReleased
         // TODO add your handling code here:
-        pesquisar_produto();
     }//GEN-LAST:event_txtProdutoKeyReleased
 
     private void tblProdutosMouseClicked(MouseEvent evt) {//GEN-FIRST:event_tblProdutosMouseClicked
@@ -3721,6 +3734,26 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
         //Evento que será usar para setar os campos da tabela clicando com o mause
         setar_campos();
     }//GEN-LAST:event_tblProdutosMouseClicked
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here: atualiza tabela ao lado com produtos pré selecionados
+        String sql = "select * from tbparametrogeral where produto like ?";
+        try {
+            pst = conexao.prepareStatement(sql);
+            
+            
+            pst.setString(1,txtProduto.getText()+ "%");
+            rs = pst.executeQuery();
+            
+            tblProdutos.setModel(DbUtils.resultSetToTableModel(rs));
+            DefaultTableModel modelo = (DefaultTableModel) tblProdutos.getModel();
+            modelo.setColumnCount(4); //corrigir bug
+            
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3807,6 +3840,7 @@ public class TelaConsultaMaquina_Celofane extends javax.swing.JFrame {
     javax.swing.JPanel c9;
     javax.swing.JButton jButton1;
     javax.swing.JButton jButton2;
+    javax.swing.JButton jButton3;
     javax.swing.JInternalFrame jInternalFrame5;
     javax.swing.JLabel jLabel1;
     javax.swing.JLabel jLabel10;

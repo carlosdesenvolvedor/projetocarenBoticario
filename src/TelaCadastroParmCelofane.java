@@ -657,10 +657,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 txtAbaste.setText(rs.getString("abastecimento"));
                 txtEsteira.setText(rs.getString("esteira"));
                 txtFormato.setText(rs.getString("formato"));*/
-                    
-                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
-                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
-                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                 
                     cboMaquina.setSelectedItem(rs.getString(2).toString());
                     txtF1a.setText(rs.getString(5));
                     txtF1b.setText(rs.getString(6));
@@ -842,13 +839,17 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtFoto3.setText(rs.getString(122));
                     txtFoto4.setText(rs.getString(125));
                     txtObsGeral.setText(rs.getString(128));
-                    cboEsteira.setSelectedItem(rs.getString(29).toString());
-                    cboAbastecimento.setSelectedItem(rs.getString(30).toString());
-                    cboAcondicionamento.setSelectedItem(rs.getString(31).toString());
+                    try {
+                        cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                        cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                        cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
+
                     
+                } catch (Exception e) {
+                }
 
             } else {
-                JOptionPane.showMessageDialog(null, "usuário não cadastrado");
+                JOptionPane.showMessageDialog(null, "Produto não cadastrado");
                 //as linhas abqaixo linpa os campos
                 /*txtUsuCol.setText(null);
                 txtUsuFon.setText(null);
@@ -871,9 +872,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(1,txtFor.getText());
             rs = pst.executeQuery();
             if (rs.next()) {
-                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
-                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
-                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+              
                     txtFor.setText(rs.getString(2));
                     cboMaquina.setSelectedItem(rs.getString(3).toString());
                     txtF1a.setText(rs.getString(5));
@@ -1056,10 +1055,14 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtFoto3.setText(rs.getString(122));
                     txtFoto4.setText(rs.getString(125));
                     txtObsGeral.setText(rs.getString(128));
-                    cboEsteira.setSelectedItem(rs.getString(29).toString());
-                    cboAbastecimento.setSelectedItem(rs.getString(30).toString());
-                    cboAcondicionamento.setSelectedItem(rs.getString(31).toString());
+                    try {
+                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
                 
+                    
+                } catch (Exception e) {
+                }
                 
 
             } else {
@@ -1090,7 +1093,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         }
     }
     }
-     private void pesquisar_produto_cadastrado(){
+   /*  private void pesquisar_produto_cadastrado(){
          String sql = "select * from tbparametrogeral where produto like ?";
         try {
             pst = conexao.prepareStatement(sql);
@@ -1112,7 +1115,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
         
-    }
+    }*/
      public void setar_campos_cadastrado(){
         int setar = tblProduto1.getSelectedRow();
         txtProduto1.setText(tblProduto1.getModel().getValueAt(setar, 3).toString());/*
@@ -1145,9 +1148,22 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 + "tc16=?,to16=?,tc17=?,to17=?,tc18=?,to18=?,tc19=?,to19=?,tc20=?,to20=?,tc21=?,to21=?,tc22=?,to22=?,tc23=?,to23=?,tc24=?,to24=?,"
                 + "tc25=?,to25=?,tc26=?,to26=?,tc27=?,to27=?,tc28=?,to28=?,tc29=?,to29=?,tc30=?,to30=?,tc31=?,to31=?,tc32=?,tc33=?,tc34=?,tc35=?,"
                 + "tc36=?,tc37=?,tc38=?,tc39=?,tc40=?,tc41=?,tc42=?,tc43=?,tc44=?,tc45=?,tc46=?,tc47=?,tc48=?,tc49=?,tc50=?,tc51=?,tc52=?,tc53=?,"
-                + "tc54=?,tc55=?,tc56=?,tc57=?,tc58=?,tc59=?,tc60=?,obsGeral=? where formato = ?";
+                + "tc54=?,tc55=?,tc56=?,tc57=?,tc58=?,tc59=?,tc60=?,obsGeral=?, where formato = ?";
         
             try {
+                /*txtFoto2.setText(rs.getString(119));
+                    txtFoto3.setText(rs.getString(122));
+                    txtFoto4.setText(rs.getString(125));
+                    txtObsGeral.setText(rs.getString(128));
+                    try {
+                    cboEsteira.setSelectedItem(rs.getString("esteira").toString());
+                    cboAbastecimento.setSelectedItem(rs.getString("abastecimento").toString());
+                    cboAcondicionamento.setSelectedItem(rs.getString("acondicionamento").toString());
+                
+                    
+                } catch (Exception e) {
+                }*/
+                
             pst = conexao.prepareStatement(sql);
             pst.setString(1, cboMaquina.getSelectedItem().toString());
             pst.setString(2, txtProduto1.getText());
@@ -1263,7 +1279,17 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(112,txtCel59.getText());
             pst.setString(113,txtCel60.getText());
             pst.setString(114,txtObsGeral.getText());
-            pst.setString(115,txtFor.getText());
+            pst.setString(115,txtFoto2.getText());
+            pst.setString(116,txtFoto3.getText());
+            pst.setString(117,txtFoto4.getText());
+            pst.setString(118,txtObsGeral.getText());
+            pst.setString(119, cboEsteira.getSelectedItem().toString());
+            pst.setString(120, cboAbastecimento.getSelectedItem().toString());
+            pst.setString(121, cboAcondicionamento.getSelectedItem().toString());
+            pst.setString(122,txtFor.getText());
+            
+           
+               
             
             // a estrutura abaixo é usada para confirmar a alteração do parametro. 
             if (txtFor.getText().isEmpty()||txtProduto1.getText().isEmpty()||txtF1a.getText().isEmpty()||txtF1b.getText().isEmpty()|| txtT2g.getText().isEmpty()||txtT2h.getText().isEmpty()||
@@ -1420,6 +1446,10 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
          pst = conexao.prepareStatement(sql);
              txtFor.setText(null);
                     cboMaquina.setSelectedItem(null);
+                    cboAbastecimento.setSelectedItem(null);
+                    cboAcondicionamento.setSelectedItem(null);
+                    cboEsteira.setSelectedItem(null);
+                            
                     txtProduto1.setText(null);
                     txtF1a.setText(null);
                     txtF1b.setText(null);
@@ -1537,6 +1567,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     lblimage2.setIcon(null);
                     lblimagem3.setIcon(null);
                     lblimagem4.setIcon(null);
+                    
              
          } catch (Exception e) {
          }
@@ -1622,6 +1653,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         btnProcurarProduto1 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         txtObsGeral = new javax.swing.JEditorPane();
@@ -2067,6 +2099,13 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             }
         });
 
+        jButton10.setText("Abrir");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jInternalFrame5Layout = new javax.swing.GroupLayout(jInternalFrame5.getContentPane());
         jInternalFrame5.getContentPane().setLayout(jInternalFrame5Layout);
         jInternalFrame5Layout.setHorizontalGroup(
@@ -2157,31 +2196,38 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel23)
                             .addComponent(jLabel199, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jInternalFrame5Layout.createSequentialGroup()
-                                .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGap(13, 13, 13)
+                                .addComponent(cboMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame5Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jInternalFrame5Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton9)
                                         .addGap(9, 9, 9)
-                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jInternalFrame5Layout.createSequentialGroup()
+                                        .addComponent(txtProduto1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton1)
-                                        .addGap(12, 12, 12))
-                                    .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(cboMaquina, 0, 344, Short.MAX_VALUE)
-                                        .addComponent(txtProduto1)))
-                                .addGap(0, 0, 0)
-                                .addComponent(btnProcurarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(btnProcurarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 1, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(12, 12, 12))
                             .addGroup(jInternalFrame5Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtFor, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
                                 .addComponent(btnProcurarProduto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(76, 76, 76)
                                 .addComponent(idcli, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(236, 236, 236))
                     .addGroup(jInternalFrame5Layout.createSequentialGroup()
@@ -2235,15 +2281,18 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                                         .addComponent(txtFor, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jLabel199)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cboMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel23)
-                                .addComponent(txtProduto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(btnProcurarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jInternalFrame5Layout.createSequentialGroup()
+                                .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cboMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel23)
+                                        .addComponent(txtProduto1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(btnProcurarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                            .addComponent(jButton10))
                         .addGap(13, 13, 13)
                         .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton3)
@@ -2380,7 +2429,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(123, 123, 123)
                                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(906, Short.MAX_VALUE))
+                .addContainerGap(890, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4320,15 +4369,15 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(23, 23, 23)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1054, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1294, Short.MAX_VALUE)
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1293, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -4390,8 +4439,28 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCel1ActionPerformed
 
     private void btnProcurarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcurarProdutoActionPerformed
-        // evento para procurar produto
-        consultar();
+        // evento para procurar produto;
+                 String sql = "select * from tbparametrogeral where produto like ?";
+        try {
+            pst = conexao.prepareStatement(sql);
+            
+            
+            pst.setString(1,txtProduto1.getText()+ "%");
+            rs = pst.executeQuery();
+            
+            tblProduto1.setModel(DbUtils.resultSetToTableModel(rs));
+            //defaultSize(tblProduto1);
+            DefaultTableModel modelo = (DefaultTableModel) tblProduto1.getModel();
+            modelo.setColumnCount(4);
+            
+            
+            //modelo.setColumnCount(114);//resolvere este bug
+            
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
         
     }//GEN-LAST:event_btnProcurarProdutoActionPerformed
 
@@ -4419,7 +4488,26 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
 
     private void txtProduto1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtProduto1KeyReleased
         // TODO add your handling code here:
-        pesquisar_produto_cadastrado();
+        /*String sql = "select * from tbparametrogeral where produto like ?";
+        try {
+            pst = conexao.prepareStatement(sql);
+            
+            
+            pst.setString(1,txtProduto1.getText()+ "%");
+            rs = pst.executeQuery();
+            
+            tblProduto1.setModel(DbUtils.resultSetToTableModel(rs));
+            //defaultSize(tblProduto1);
+            DefaultTableModel modelo = (DefaultTableModel) tblProduto1.getModel();
+            modelo.setColumnCount(4);
+            
+            
+            //modelo.setColumnCount(114);//resolvere este bug
+            
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }*/
     }//GEN-LAST:event_txtProduto1KeyReleased
 
     private void txtProduto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProduto1ActionPerformed
@@ -4598,6 +4686,11 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         novo_produto();
     }//GEN-LAST:event_jButton9ActionPerformed
 
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        consultar();
+    }//GEN-LAST:event_jButton10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -4687,6 +4780,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
     private javax.swing.JTextField imagePath4;
     private javax.swing.JTextField imagePath6;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
