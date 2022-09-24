@@ -204,7 +204,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(11, txtT2h.getText());
             pst.setString(12, txtT2k.getText());
             pst.setString(13, txtT2hh.getText());
-            pst.setString(14, txtT2i.getText());
+            pst.setString(14, txtT2i.getText()); 
             pst.setString(15, txtT2j.getText());
             pst.setString(16, txtT2n.getText());
             pst.setString(17, txtT2m.getText());
@@ -213,7 +213,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(20, txtD2p.getText());
             pst.setString(21, txtL2g.getText());
             pst.setString(22, txtL2h.getText());
-            pst.setString(23, txtL2k.getText());
+            pst.setString(23, txtL2D.getText());
             pst.setString(24, txtCel1.getText());
             pst.setString(25, txtObs1.getText());
             pst.setString(26, txtCel2.getText());
@@ -330,7 +330,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 txtF1c.getText().isEmpty()||txtF1d.getText().isEmpty()||txtT2hh.getText().isEmpty()||txtT2i.getText().isEmpty()||
                 txtF1e.getText().isEmpty()|| txtF1f.getText().isEmpty()||txtT2k.getText().isEmpty()||txtT2m.getText().isEmpty()||txtT2n.getText().isEmpty()||
                 txtD2o.getText().isEmpty()||txtD2q.getText().isEmpty()|| txtD2p.getText().isEmpty()||txtL2g.getText().isEmpty()||
-                txtL2h.getText().isEmpty()||txtL2k.getText().isEmpty()|| 
+                txtL2h.getText().isEmpty()||txtL2D.getText().isEmpty()|| txtT2j.getText().isEmpty()||txtD2p.getText().isEmpty()||
                 cboMaquina.getSelectedItem().toString().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Favor preecher todos os campos obrigatórios");
 
@@ -368,7 +368,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtD2q.setText(null);
                     txtL2g.setText(null);
                     txtL2h.setText(null);
-                    txtL2k.setText(null);
+                    txtL2D.setText(null);
                     txtCel1.setText(null);
                     txtObs1.setText(null);
                     txtCel2.setText(null);
@@ -528,7 +528,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtD2q.setText(null);
                     txtL2g.setText(null);
                     txtL2h.setText(null);
-                    txtL2k.setText(null);
+                    txtL2D.setText(null);
                     txtCel1.setText(null);
                     txtObs1.setText(null);
                     txtCel2.setText(null);
@@ -667,18 +667,18 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtF1f.setText(rs.getString(10));
                     txtT2g.setText(rs.getString(11));
                     txtT2h.setText(rs.getString(12));
-                    txtT2hh.setText(rs.getString(13));
-                    txtT2i.setText(rs.getString(14));
-                    txtT2j.setText(rs.getString(15));
-                    txtT2k.setText(rs.getString(16));
-                    txtT2m.setText(rs.getString(17));
-                    txtT2n.setText(rs.getString(18));
+                    txtT2k.setText(rs.getString(13));
+                    txtT2hh.setText(rs.getString(14));
+                    txtT2i.setText(rs.getString(15));
+                    txtT2j.setText(rs.getString(16));
+                    txtT2n.setText(rs.getString(17));
+                    txtT2m.setText(rs.getString(18));
                     txtD2o.setText(rs.getString(19));
-                    txtD2p.setText(rs.getString(20));
-                    txtD2q.setText(rs.getString(21));
+                    txtD2q.setText(rs.getString(20));
+                    txtD2p.setText(rs.getString(21));
                     txtL2g.setText(rs.getString(22));
                     txtL2h.setText(rs.getString(23));
-                    txtL2k.setText(rs.getString(24));
+                    txtL2D.setText(rs.getString(24));
                     txtCel1.setText(rs.getString(25));
                     txtObs1.setText(rs.getString(26));
                     txtCel2.setText(rs.getString(27));
@@ -879,7 +879,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
               
                     cboMaquina.setSelectedItem(rs.getString(3).toString());
                     txtProduto1.setText(rs.getString(4));
-                    txtF1a.setText(rs.getString(5));
+                   txtF1a.setText(rs.getString(5));
                     txtF1b.setText(rs.getString(6));
                     txtF1c.setText(rs.getString(7));
                     txtF1d.setText(rs.getString(8));
@@ -887,18 +887,18 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtF1f.setText(rs.getString(10));
                     txtT2g.setText(rs.getString(11));
                     txtT2h.setText(rs.getString(12));
-                    txtT2hh.setText(rs.getString(13));
-                    txtT2i.setText(rs.getString(14));
-                    txtT2j.setText(rs.getString(15));
-                    txtT2k.setText(rs.getString(16));
-                    txtT2m.setText(rs.getString(17));
-                    txtT2n.setText(rs.getString(18));
+                    txtT2k.setText(rs.getString(13));
+                    txtT2hh.setText(rs.getString(14));
+                    txtT2i.setText(rs.getString(15));
+                    txtT2j.setText(rs.getString(16));
+                    txtT2n.setText(rs.getString(17));
+                    txtT2m.setText(rs.getString(18));
                     txtD2o.setText(rs.getString(19));
-                    txtD2p.setText(rs.getString(20));
-                    txtD2q.setText(rs.getString(21));
+                    txtD2q.setText(rs.getString(20));
+                    txtD2p.setText(rs.getString(21));
                     txtL2g.setText(rs.getString(22));
                     txtL2h.setText(rs.getString(23));
-                    txtL2k.setText(rs.getString(24));
+                    txtL2D.setText(rs.getString(24));
                     txtCel1.setText(rs.getString(25));
                     txtObs1.setText(rs.getString(26));
                     txtCel2.setText(rs.getString(27));
@@ -1201,7 +1201,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             pst.setString(19, txtD2p.getText());
             pst.setString(20, txtL2g.getText());
             pst.setString(21, txtL2h.getText());
-            pst.setString(22, txtL2k.getText());
+            pst.setString(22, txtL2D.getText());
             pst.setString(23, txtCel1.getText());
             pst.setString(24, txtObs1.getText());
             pst.setString(25, txtCel2.getText());
@@ -1314,7 +1314,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
             txtF1c.getText().isEmpty()||txtF1d.getText().isEmpty()||txtT2hh.getText().isEmpty()||txtT2i.getText().isEmpty()||
                 txtF1e.getText().isEmpty()|| txtF1f.getText().isEmpty()||txtT2k.getText().isEmpty()||txtT2m.getText().isEmpty()||txtT2n.getText().isEmpty()||
                 txtD2o.getText().isEmpty()||txtD2q.getText().isEmpty()|| txtD2p.getText().isEmpty()||txtL2g.getText().isEmpty()||
-                txtL2h.getText().isEmpty()||txtL2k.getText().isEmpty()|| 
+                txtL2h.getText().isEmpty()||txtL2D.getText().isEmpty()|| 
                 cboMaquina.getSelectedItem().toString().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Favor preecher todos os campos obrigatórios");
 
@@ -1487,7 +1487,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                     txtD2q.setText(null);
                     txtL2g.setText(null);
                     txtL2h.setText(null);
-                    txtL2k.setText(null);
+                    txtL2D.setText(null);
                     txtCel1.setText(null);
                     txtObs1.setText(null);
                     txtCel2.setText(null);
@@ -1613,7 +1613,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
         jLabel186 = new javax.swing.JLabel();
         jLabel187 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtL2k = new javax.swing.JTextField();
+        txtL2D = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel188 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
@@ -2261,7 +2261,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                                 .addGap(33, 33, 33)
                                 .addComponent(jLabel188, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtL2k, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(txtL2D, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jInternalFrame5Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2376,7 +2376,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jInternalFrame5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel187)
-                    .addComponent(txtL2k, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtL2D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel188)
                     .addComponent(txtL2h, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel197)
@@ -5041,9 +5041,9 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
     private javax.swing.JTextField txtFoto2;
     private javax.swing.JTextField txtFoto3;
     private javax.swing.JTextField txtFoto4;
+    private javax.swing.JTextField txtL2D;
     private javax.swing.JTextField txtL2g;
     private javax.swing.JTextField txtL2h;
-    private javax.swing.JTextField txtL2k;
     private javax.swing.JTextField txtObs1;
     private javax.swing.JTextField txtObs10;
     private javax.swing.JTextField txtObs11;

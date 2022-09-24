@@ -320,7 +320,7 @@
                                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                               <Component id="jLabel188" min="-2" pref="18" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="txtL2k" min="-2" pref="57" max="-2" attributes="0"/>
+                                              <Component id="txtL2D" min="-2" pref="57" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -460,7 +460,7 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel187" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtL2k" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtL2D" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel188" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtL2h" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel197" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -496,7 +496,7 @@
                         <Property name="text" type="java.lang.String" value="1D"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtL2k">
+                    <Component class="javax.swing.JTextField" name="txtL2D">
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel5">
                       <Properties>
