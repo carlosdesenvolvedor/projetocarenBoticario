@@ -1149,7 +1149,7 @@ public class TelaCadastroParmCelofane extends javax.swing.JFrame {
                 + "tc25=?,to25=?,tc26=?,to26=?,tc27=?,to27=?,tc28=?,to28=?,tc29=?,to29=?,tc30=?,to30=?,tc31=?,to31=?,tc32=?,tc33=?,tc34=?,tc35=?,"
                 + "tc36=?,tc37=?,tc38=?,tc39=?,tc40=?,tc41=?,tc42=?,tc43=?,tc44=?,tc45=?,tc46=?,tc47=?,tc48=?,tc49=?,tc50=?,tc51=?,tc52=?,tc53=?,"
                 + "tc54=?,tc55=?,tc56=?,tc57=?,tc58=?,tc59=?,tc60=?,obsGeral=?, where formato = ?";
-        
+                //não esquecer dos obs das fotos e arrumar M.O
             try {
                 /*txtFoto2.setText(rs.getString(119));
                     txtFoto3.setText(rs.getString(122));
